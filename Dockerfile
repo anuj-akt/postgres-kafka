@@ -12,7 +12,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends adoptopenjdk-12-hotspot \
     && wget http://apachemirror.wuchna.com/kafka/2.3.0/kafka_2.12-2.3.0.tgz \
     && rm -rf /var/lib/apt/lists/* \
-    && apt-get purge -y --auto-remove wget
+    && apt-get purge -y --auto-remove wget software-properties-common
 
 RUN tar xzf kafka_2.12-2.3.0.tgz
 
